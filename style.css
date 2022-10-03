@@ -1,0 +1,68 @@
+*,
+*::after, *::before{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background: linear-gradient(90deg, rgb(250,50, 25) 0%, rgb(228, 185, 45) 50%, rgb(250, 50, 25) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.clock{
+  width: 50vw;
+  height: 50vw;
+  background: url(clock.png) no-repeat;
+  background-size: 50vw 50vw ;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.clock .line {
+  position: absolute;
+  border: 1px solid rgb(236, 121, 27);
+  border-radius: 10px;
+  transform-origin: bottom;
+  opacity: 0.8;
+}
+ 
+
+.clock .line.scnd{
+  bottom: 49%;
+    left: 49.9%;
+    width: 4px;
+    height: 40%;
+    background-color: red;
+    z-index: 3;
+}
+.clock .line.mnt{
+    bottom: 49%;
+    left: 49.6%;
+    width: 7px;
+    height: 31.5%;
+    background-color: rgb(11, 7, 219);
+    z-index: 2;
+}
+.clock .line.hr{
+    bottom: 49%;
+    left: 49.2%;
+    width: 10px;
+    height: 24%;
+    background-color: black;
+    z-index: 1;
+}
+.clock .dot{
+  width: 2vw;
+  height: 2vw;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 48.5%;
+  left: 48.5%;
+  opacity: 0.9;
+  z-index: 4;
+}
